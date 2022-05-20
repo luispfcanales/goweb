@@ -1,0 +1,11 @@
+{{ define "home" }}
+  {{ template "header" }}
+    <div class="container py-3">
+      {{ template "navbar" }}
+      {{ template "carousel" }}
+      {{ template "description" }}
+      {{ template "learning" }}
+      {{ template "prices" }}
+      {{ template "footer" }}
+    </div>
+{{ end }}

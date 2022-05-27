@@ -21,7 +21,9 @@ func Run(port string) error {
 	usersrv := services.NewUserService(storage)
 	userHandle := userhdl.New(usersrv, gotpl)
 
+	http.Handle("/public/", http.StripPrefix("/public/", http.FileServer(http.Dir("public"))))
 	http.HandleFunc("/", userHandle.Home)
+	http.HandleFunc("/login", userHandle.Login)
 
 	log.Println("listen on port :", port)
 	return http.ListenAndServe(":"+port, nil)

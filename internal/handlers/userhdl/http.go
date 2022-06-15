@@ -28,5 +28,14 @@ func (hdl *HTTPHandlerUser) Get(w http.ResponseWriter, r *http.Request) {
 
 //Home render home template
 func (hdl *HTTPHandlerUser) Home(w http.ResponseWriter, r *http.Request) {
+	if r.URL.Path != "/" {
+		http.NotFound(w, r)
+		return
+	}
 	hdl.gotpl.Render(w, "home", nil)
+}
+
+//Login render login template
+func (hdl *HTTPHandlerUser) Login(w http.ResponseWriter, r *http.Request) {
+	hdl.gotpl.Render(w, "login", nil)
 }

@@ -86,4 +86,5 @@ body {
 </head>
 
 <body>
+  <h1>Centro recreativo para los niños y padres Puerto Maldonado</h1>
   {{ end }}

@@ -1,7 +1,7 @@
 {{ define "home" }}
   {{ template "header" }}
     <div class="container py-3">
-      <h1>Centro recreativo Puerto Maldonado</h1>
+      <h1>Centro recreativo niños Puerto Maldonado</h1>
       {{ template "navbar" }}
       {{ template "carousel" }}
       {{ template "description" }}
